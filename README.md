@@ -1,6 +1,4 @@
 # Lauzhack_creditSuisse
-Credit Suisse Challenge Lausanne 
-
 Overview
 Introduction
 Identifying suspicious clients undertaking abnormal behaviors, fraudulent activities or terrorist financing is a major challenge in Compliance at Credit Suisse. Nowadays, rule based scenarios are not relevant anymore and data science is seen as a game changer for the bank. In a world where there are more and more regulations and where the reputational risk is more and more at stake for Credit Suisse, we need you to find out the methods for the future and help us identify our suspicious clients using state of the art machine learning techniques and your smart analysis.
@@ -20,6 +18,21 @@ C00100	Yes	$1600	32	…
 C00200	No	$12	55	…
 C00300	No	$1	null	…
 You then have to guess the suspicious clients for the next year 2017.
+
+Column names:
+customer: customer number
+category: 0-Individual, 1-Business 2-Organization
+turnover: amount_going_in-amount_going_out
+transaction_count: number of transactions the client made
+io_ratio: number_transaction_in/(number_transaction_in+number_transaction_out)
+is_pep: is the client political
+inactive_days_average : average number of consecutive days without transaction
+inactive_days_max: maximum number of consecutive days without transactions
+n_of_accounts: number of accounts own by the customer
+distinct_counterparties: number of distinct counterparties (people you send moeny to)
+channel_risk: global risk score based on the different channels (online banking, mobile, trading platform etc…)
+atm_withdrawal: amounts withdrawn from atm
+atm_deposit: amount deposited with cash on the accounts
 
 Your Mission
 Along the 3 rounds, the investigation team requires you not only to provide your results, but also to help them understand your decision by building a tool or a visualisation interface or whatever you can imagine to help them make a decision on who has a fraudulent behaviour vs who doesn’t.
@@ -53,8 +66,14 @@ The evaluation will be based on multiple aspects of your work:
 The scores from the 3 rounds of the hackathon
 The quality and originality of your innovative data visualization tool to help the investigation team to understand your results and have a deeper understanding of why you raised some specific alerts.
 The presentation you will make to the jury.
+Submissions should be csv files with a header with the following format:
+
+customer
+900000001
+900000017 …
+
 Rules
-As your results are being investigated by an internal team, you can only produce a limited number of datasets per round: round 1: 5 round 2: 2 round 3: 4
+As your results are being investigated by an internal team, you can only submit a limited number of datasets per round: round 1: 5 round 2: 2 round 3: 4
 
 If the dataset is wrongly formatted and raise an evaluation error, you still have the possibility to re-submit as many times as you want.
 
@@ -69,3 +88,7 @@ train.csv.zip
 You will have to evaluate the following datasets:
 
 test.csv.zip
+
+Example submission for round 1:
+
+prediction_sample.csv
